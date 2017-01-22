@@ -128,3 +128,8 @@ body {
 
 .navbar > .navbar-list > .navbar-item.active > .navbar-link { color: #F06000; }
 
+section {
+	width: 40%;
+	padding: 30px;
+}
+
