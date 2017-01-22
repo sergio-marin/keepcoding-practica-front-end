@@ -5,7 +5,7 @@
 body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
-	background: #0f0f0f;
+	background: #ffffff;
 }
 
 .header {
@@ -128,8 +128,51 @@ body {
 
 .navbar > .navbar-list > .navbar-item.active > .navbar-link { color: #F06000; }
 
-section {
-	width: 40%;
-	padding: 30px;
+#quien-soy {
+    background: #2B2B2B;
+    padding-top: 96px;
+    padding-bottom: 66px;
+    overflow: hidden;
+    margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
 }
 
+#quien-soy h2 {
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+#quien-soy p {
+    line-height: 30px;
+    color: #7A7A7A;
+}
+
+#quien-soy > .profile-pic {
+
+}
+
+#quien-soy .profile-pic > img {
+	position: relative;
+    width: 200px;
+    border-radius: 100%;
+    margin: 30px 50px;
+}
+
+#quien-soy > .about-me-info {
+
+}
+
+
+
+.container {
+	min-height: 100%;
+	margin-bottom: -50px;
+}
+
+.clearfix:after {
+	content: " "; /* Older browser do not support empty content */
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
