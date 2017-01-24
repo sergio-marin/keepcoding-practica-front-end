@@ -142,6 +142,13 @@ body {
     margin-bottom: 12px;
 }
 
+#quien-soy h2 span {
+    font-weight: normal;
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+
 #quien-soy p {
     line-height: 30px;
     color: #7A7A7A;
@@ -160,29 +167,24 @@ body {
 
 #estudios { border-bottom: 1px solid #E8E8E8; }
 
-#estudios,
-#experiencia {
+#estudios {
 	padding-top: 50px;
     padding-bottom: 50px;
 }
 
-#estudios h1,
-#experiencia h1 {
+#estudios h2 {
     letter-spacing: 1px;
     -webkit-margin-before: 1em;
     text-align: center;
 }
 
-#estudios h1 span,
-#experiencia h1 span {
-	margin: 30px 50px;
+#estudios h2 span {
     border-bottom: 3px solid #11ABB0;
     padding-bottom: 6px;
     text-transform: uppercase;
 }
 
-#estudios .estudios-info h3,
-#experiencia .exp-info h3 {
+#estudios .estudios-info h3 {
 	font: 30px/30px 'opensans-regular', sans-serif;
     font-weight: bold;
 }
@@ -199,7 +201,7 @@ body {
 #experiencia .exp-info .info span {
     margin-right: 5px;
     margin-left: 5px;
-    color: black;
+    color: #11ABB0;
     font-weight: bold;
 }
 
@@ -213,6 +215,184 @@ body {
 #experiencia .fecha {
     font: 15px/24px 'opensans-regular', sans-serif;
     margin-top: 6px;
+}
+
+#experiencia {
+	padding-top: 50px;
+    padding-bottom: 50px;
+    background: #2B2B2B;
+    overflow: hidden;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+#experiencia h2 {
+    letter-spacing: 1px;
+    -webkit-margin-before: 1em;
+    text-align: center;
+}
+
+#experiencia h2 span {
+	font-weight: normal;
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#experiencia .exp-info h3 {
+	color: #fff;
+    font: 30px/30px 'opensans-regular', sans-serif;
+}
+
+#sobre-mi {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about-me > .mi-video {
+	max-width: 50%;
+	float: left;
+	margin-top: 24px;
+}
+
+.about-me > .about-me-info {
+	max-width: 50%;
+	float: right;
+}
+
+.about-me > .about-me-info h2 {
+	margin-top: 0;
+}
+
+.about-me > .about-me-info h2 span {
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+
+#contacto {
+	padding-top: 50px;
+    padding-bottom: 50px;
+    background: #2B2B2B;
+    overflow: hidden;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+#contacto {
+   background: #191919;
+   padding-top: 96px;
+   padding-bottom: 102px;
+   color: #636363;
+}
+#contacto .section-head { margin-bottom: 42px; }
+
+#contacto a, #contacto a:visited  { color: #11ABB0; }
+#contacto a:hover, #contacto a:focus { color: #fff; }
+
+#contacto h2 span {
+    font-weight: normal;
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#contacto h2 span:after {
+   	font-family: 'FontAwesome';
+   	content: "\f0e0";
+	font-size: 36px;
+   	line-height: 72px;
+   	text-align: left;
+   	display: block;
+   	color: #ebeeee;
+}
+
+#contacto h4 {
+   font: 16px/24px 'opensans-bold', sans-serif;
+   color: #EBEEEE;
+   margin-bottom: 6px;
+}
+
+#contacto p.lead {
+   font: 18px/36px 'opensans-light', sans-serif;
+   padding-right: 3%;
+}
+
+/* contact form */
+#contacto form { margin-bottom: 30px; }
+#contacto fieldset { border: 0; }
+#contacto label {
+    font: 15px/24px 'opensans-bold', sans-serif;
+    margin: 12px 0;
+    color: #EBEEEE;
+    display: inline-block;
+    width: 26%;
+    text-align: right;
+    padding-right: 50px;
+    float: left;
+}
+
+#contacto input,
+#contacto textarea,
+#contacto select {
+   padding: 18px 20px;
+	color: #eee;
+	background: #373233;
+	margin-bottom: 42px;
+	border: 0;
+	outline: none;
+   font-size: 15px;
+   line-height: 24px;
+   width: 65%;
+}
+#contacto input:focus,
+#contacto textarea:focus,
+#contacto select:focus {
+	color: #fff;
+	background-color: #11ABB0;
+}
+#contacto button.submit {
+	font: 16px/30px 'opensans-bold', sans-serif;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #fff;
+    background: #0D0D0D;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 26%;
+}
+#contacto button.submit:hover {
+	color: #0D0D0D;
+	background: #fff;
+}
+#contacto span.required {
+	color: #11ABB0;
+	font-size: 13px;
+}
+#message-warning, #message-success {
+   display: none;
+	background: #0F0F0F;
+	padding: 24px 24px;
+	margin-bottom: 36px;
+   width: 65%;
+   margin-left: 26%;
+}
+#message-warning { color: #D72828; }
+#message-success { color: #11ABB0; }
+
+#message-warning i,
+#message-success i {
+   margin-right: 10px;
+}
+#image-loader {
+   display: none;
+   position: relative;
+   left: 18px;
+   top: 17px;
 }
 
 .opacidad {
