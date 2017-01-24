@@ -158,11 +158,66 @@ body {
     margin: 30px 50px;
 }
 
-#quien-soy > .about-me-info {
+#estudios { border-bottom: 1px solid #E8E8E8; }
 
+#estudios,
+#experiencia {
+	padding-top: 50px;
+    padding-bottom: 50px;
 }
 
+#estudios h1,
+#experiencia h1 {
+    letter-spacing: 1px;
+    -webkit-margin-before: 1em;
+    text-align: center;
+}
 
+#estudios h1 span,
+#experiencia h1 span {
+	margin: 30px 50px;
+    border-bottom: 3px solid #11ABB0;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+}
+
+#estudios .estudios-info h3,
+#experiencia .exp-info h3 {
+	font: 30px/30px 'opensans-regular', sans-serif;
+    font-weight: bold;
+}
+
+#estudios .estudios-info .info,
+#experiencia .exp-info .info {
+    color: #6E7881;
+    margin-bottom: 18px;
+    margin-top: 9px;
+    font-style: italic;
+}
+
+#estudios .estudios-info .info span,
+#experiencia .exp-info .info span {
+    margin-right: 5px;
+    margin-left: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+#estudios .estudios-info .desc,
+#experiencia .exp-info .desc {
+    line-height: 30px;
+    color: #838C95;
+}
+
+#estudios .fecha,
+#experiencia .fecha {
+    font: 15px/24px 'opensans-regular', sans-serif;
+    margin-top: 6px;
+}
+
+.opacidad {
+    background-color: #333;
+}
 
 .container {
 	min-height: 100%;
