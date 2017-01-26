@@ -9,6 +9,7 @@
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/modernizr-custom.js"></script>
     <script src="js/number-polyfill.js"></script>
+    <script src="js/cursos.js"></script>
 </head>
 
 <body>
@@ -21,6 +22,7 @@
                 <li class="navbar-item"><a class="navbar-link smoothscroll" href="#quien-soy">Quién Soy</a></li>
                 <li class="navbar-item"><a class="navbar-link smoothscroll" href="#estudios">Estudios</a></li>
                 <li class="navbar-item"><a class="navbar-link smoothscroll" href="#experiencia">Experiencia</a></li>
+                <li class="navbar-item"><a class="navbar-link smoothscroll" href="#cursos">Cursos</a></li>
                 <li class="navbar-item"><a class="navbar-link smoothscroll" href="#sobre-mi">Sobre mí</a></li>
                 <li class="navbar-item"><a class="navbar-link smoothscroll" href="#contacto">Contacto</a></li>
             </ul>
@@ -131,6 +133,63 @@
                 </div>
             </div>
         </section><!-- Fin Experiencia -->
+
+        <!-- Cursos
+        ================================================== -->
+        <section id="cursos">
+            <div class="section-content row container">
+                <div class="col-4">
+                    <h2><span>Cursos</span></h2>
+                    <!-- form -->
+                    <form action="" method="post" id="coursesForm" name="coursesForm">
+                        <fieldset>
+                            <div>
+                                <label for="courseName">Curso <span class="required">*</span></label>
+                                <input type="text" value="" id="courseName" name="courseName" required>
+                            </div>
+                            <div>
+                                <label for="courseAcademy">Academia <span class="required">*</span></label>
+                                <input type="text" value="" id="courseAcademy" name="courseAcademy" required>
+                            </div>
+                            <div>
+                                <label for="courseDate">Fecha <span class="required">*</span></label>
+                                <input type="text" value="" id="courseDate" name="courseDate" placeholder="Mes Año" required>
+                            </div>
+                            <div>
+                                <label for="courseDescription">Descripción</label>
+                                <textarea cols="10" rows="5" id="courseDescription" name="courseDescription" required></textarea>
+                            </div>
+                            <div id="send-course-button">
+                                <button class="submit">Añadir</button>
+                                <span id="image-loader">
+                                   <img alt="" src="images/loader.gif">
+                                </span>
+                            </div>
+                        </fieldset>
+                    </form> <!-- Form End -->
+                </div>
+                <div class="col-8">
+                    <div class="row">
+                        <div class="cursos-info col-12">
+                            <h3>KeepCoding</h3>
+                            <p class="info">Web Development Master Bootcamp <span>&bull;</span> <em class="fecha">Enero 2017</em></p>
+                            <p class="desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                                ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                                Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+                            </p>
+                    </div>
+                    <div class="row">
+                        <div class="cursos-info col-12">
+                            <h3>I.E.S. Mare Nostrum</h3>
+                            <p class="info">CFGS Administración de Sistemas Informáticos <span>&bull;</span> <em class="fecha">Marzo 2007</em></p>
+                            <p class="desc">Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Fin Estudios -->
 
         <!-- Sobre mi
         ================================================== -->

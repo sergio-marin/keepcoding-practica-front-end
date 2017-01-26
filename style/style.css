@@ -196,32 +196,37 @@ body {
 	transform: rotateY(0);
 }
 
-#estudios { border-bottom: 1px solid #E8E8E8; }
-
-#estudios {
+#estudios,
+#cursos {
 	padding-top: 96px;
     padding-bottom: 50px;
+    border-bottom: 1px solid #E8E8E8;
 }
 
-#estudios h2 {
+#estudios h2,
+#experiencia h2,
+#cursos h2 {
     letter-spacing: 1px;
     -webkit-margin-before: 1em;
     text-align: center;
 }
 
-#estudios h2 span {
+#estudios h2 span,
+#cursos h2 span {
     border-bottom: 3px solid #11ABB0;
     padding-bottom: 6px;
     text-transform: uppercase;
 }
 
-#estudios .estudios-info h3 {
+#estudios .estudios-info h3,
+#cursos .cursos-info h3 {
 	font: 30px/30px 'opensans-regular', sans-serif;
     font-weight: bold;
 }
 
 #estudios .estudios-info .info,
-#experiencia .exp-info .info {
+#experiencia .exp-info .info,
+#cursos .cursos-info .info {
     color: #6E7881;
     margin-bottom: 18px;
     margin-top: 9px;
@@ -229,7 +234,8 @@ body {
 }
 
 #estudios .estudios-info .info span,
-#experiencia .exp-info .info span {
+#experiencia .exp-info .info span,
+#cursos .cursos-info .info span {
     margin-right: 5px;
     margin-left: 5px;
     color: #11ABB0;
@@ -237,21 +243,17 @@ body {
 }
 
 #estudios .estudios-info .desc,
-#experiencia .exp-info .desc {
+#experiencia .exp-info .desc,
+#cursos .cursos-info .desc {
     line-height: 30px;
     color: #838C95;
 }
 
 #estudios .fecha,
-#experiencia .fecha {
+#experiencia .fecha,
+#cursos .fecha {
     font: 15px/24px 'opensans-regular', sans-serif;
     margin-top: 6px;
-}
-
-#experiencia h2 {
-    letter-spacing: 1px;
-    -webkit-margin-before: 1em;
-    text-align: center;
 }
 
 #experiencia h2 span {
@@ -334,9 +336,8 @@ body {
    padding-right: 3%;
 }
 
-/* contact form */
 #contacto form { margin-bottom: 30px; }
-#contacto fieldset { border: 0; }
+#contacto fieldset, #cursos fieldset { border: 0; }
 #contacto label,
 #contactHowMeet span {
     font: 15px/24px 'opensans-bold', sans-serif;
@@ -347,6 +348,10 @@ body {
     text-align: right;
     padding-right: 50px;
     float: left;
+}
+
+#cursos label {
+	color: #838C95;
 }
 
 #contacto input,
@@ -361,6 +366,24 @@ body {
    	font-size: 15px;
    	line-height: 24px;
    	width: 65%;
+}
+
+#cursos input,
+#cursos textarea,
+#cursos select {
+	padding: 5px 8px;
+    color: #eee;
+    background: #373233;
+    margin-bottom: 20px;
+    border: 0;
+    outline: none;
+    line-height: 20px;
+    width: 90%;
+    display: block;
+}
+
+#cursos span.required {
+	color: #11ABB0;
 }
 
 #contacto .radio-select input {
@@ -378,6 +401,7 @@ body {
 	background-color: transparent;
 }
 
+#cursos button.submit,
 #contacto button.submit {
 	font: 16px/30px 'opensans-bold', sans-serif;
     padding: 12px 20px;
@@ -392,9 +416,19 @@ body {
     font-weight: bold;
 }
 
-#contacto button.submit:hover {
+#cursos button.submit {
+    color: #fff;
+    background: #373233;
+}
+
+#cursos button.submit:hover {
     background: #11ABB0;
     color: #fff;
+}
+
+#contacto button.submit:hover {
+    background: #fff;
+    color: #11ABB0;
 }
 
 #contacto span.required {
