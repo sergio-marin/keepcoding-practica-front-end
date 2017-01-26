@@ -179,25 +179,42 @@
                         <fieldset>
                             <div>
                                 <label for="contactName">Nombre <span class="required">*</span></label>
-                                <input type="text" value="" size="35" id="contactName" name="contactName">
+                                <input type="text" value="" id="contactName" name="contactName" required>
                             </div>
-
                             <div>
                                 <label for="contactEmail">Email <span class="required">*</span></label>
-                                <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
+                                <input type="text" value="" id="contactEmail" name="contactEmail" pattern="[A-Za-Z0-9\.\+]+@[A-Za-Z0-9]+\.[A-Za-Z0-9\.]+" required>
                             </div>
-
+                            <div>
+                                <label for="contactPhone">Teléfono <span class="required">*</span></label>
+                                <input type="text" value="" id="contactPhone" name="contactPhone" required>
+                            </div>
                             <div>
                                 <label for="contactSubject">Asunto</label>
-                                <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
+                                <input type="text" value="" id="contactSubject" name="contactSubject">
                             </div>
-
                             <div>
                                 <label for="contactMessage">Mensaje <span class="required">*</span></label>
-                                <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
+                                <textarea cols="50" rows="15" id="contactMessage" name="contactMessage" required></textarea>
                             </div>
-
-                            <div>
+                            <div id="contactHowMeet">
+                                <div>
+                                    <span>Cómo me conociste?</span>
+                                </div>
+                                <div class="radio-select">
+                                    <label for="referidos">Me hablaron de ti</label>
+                                    <input type="radio" id="referidos" name="contactHowMeet" value="referidos" required>
+                                    <label for="google">Google</label>
+                                    <input type="radio" id="google" name="contactHowMeet" value="googleº" required>
+                                    <label for="otros">Otros</label>
+                                    <input type="radio" id="otros" name="contactHowMeet" value="otros" required>
+                                </div>
+                                <div id="cuentamelo">
+                                    <label for="otrosMessage">Cuéntamelo:</label>
+                                    <textarea cols="50" rows="3" id="otrosMessage" name="otrosMessage"></textarea>
+                                </div>
+                            </div>
+                            <div id="send-button">
                                 <button class="submit">Enviar</button>
                                 <span id="image-loader">
                                    <img alt="" src="images/loader.gif">
