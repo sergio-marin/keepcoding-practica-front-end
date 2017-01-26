@@ -82,6 +82,20 @@
     	}
 	});
 
-   
+/*----------------------------------------------------*/
+/*	Restringir Número Palabras Textarea
+------------------------------------------------------*/
+	$("#contactMessage").on('keyup', function() {
+		var maxWords = 10;
+    	var words = this.value.match(/\S+/g).length;
+
+	    if (words > maxWords) {
+	      // Cogemos las x primeras palabras y las unimos añadiendo los espacios en blanco
+	      var trimmed = $(this).val().split(/\s+/, maxWords).join(" ");
+	      // Añadimos un espacio al final
+	      $(this).val(trimmed + " ");
+	      alert("Sólo se permiten 150 palabras ;-)");
+	    }
+  });
 
 });
