@@ -183,11 +183,11 @@
                             </div>
                             <div>
                                 <label for="contactEmail">Email <span class="required">*</span></label>
-                                <input type="text" value="" id="contactEmail" name="contactEmail" pattern="[A-Za-Z0-9\.\+]+@[A-Za-Z0-9]+\.[A-Za-Z0-9\.]+" required>
+                                <input type="text" value="" id="contactEmail" name="contactEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                             </div>
                             <div>
                                 <label for="contactPhone">Teléfono <span class="required">*</span></label>
-                                <input type="text" value="" id="contactPhone" name="contactPhone" required>
+                                <input type="text" value="" id="contactPhone" name="contactPhone" placeholder="123456789" pattern="/^[9|6|7][0-9]{8}$/" required>
                             </div>
                             <div>
                                 <label for="contactSubject">Asunto</label>
