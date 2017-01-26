@@ -57,7 +57,6 @@ body {
    border-color: rgba(150, 150, 150, .1);
 }
 
-/* header social links */
 .header > .header-text > .social {
    margin: 24px 0;
    padding: 0;
@@ -466,7 +465,7 @@ footer {
 }
 
 footer a, footer a:visited { color: #525252; }
-footer a:hover, footer a:focus { color: #fff; }
+footer a:hover, footer a:focus { color: #11ABB0; }
 
 /* copyright */
 footer .copyright {
@@ -481,39 +480,26 @@ footer .copyright li {
     line-height: 24px;
 }
 
-.ie footer .copyright li {
-   display: inline;
-}
-
-footer .copyright li:before {
-    content: "\2022";
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #095153;
-}
-
 footer .copyright  li:first-child:before {
     display: none;
 }
 
-/* social links */
-footer .social-links {
-   margin: 18px 0 30px 0;
-   padding: 0;
-   font-size: 30px;
+footer .social {
+   	padding: 0;
+   	font-size: 30px;
+   	display: flex;
+	justify-content: center;
+	list-style-type: none;
 }
 
-footer .social-links li {
-    display: inline-block;
+footer .social li {
     margin: 0;
     padding: 0;
-    margin-left: 42px;
-    color: #F06000;
+    margin-left: 40px;
 }
 
-footer .social-links li:first-child { margin-left: 0; }
+footer .social li:first-child { margin-left: 0; }
 
-/* Go To Top Button */
 #go-top {
 	position: absolute;
 	top: -24px;
@@ -528,17 +514,16 @@ footer .social-links li:first-child { margin-left: 0; }
 	width: 60px;
 	height: 60px;
 	background-color: #525252;
+	color: #fff;
+    font-size: 21px;
+    line-height: 60px;
+ 	border-radius: 100%;
 
 	-webkit-transition: all 0.2s ease-in-out;
-   -moz-transition: all 0.2s ease-in-out;
-   -o-transition: all 0.2s ease-in-out;
-   -ms-transition: all 0.2s ease-in-out;
-   transition: all 0.2s ease-in-out;
-
-   color: #fff;
-   font-size: 21px;
-   line-height: 60px;
- 	border-radius: 100%;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 #go-top a:hover { background-color: #0F9095; }
