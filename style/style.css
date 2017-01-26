@@ -383,16 +383,18 @@ body {
     padding: 12px 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #fff;
-    background: #0D0D0D;
+    color: #0D0D0D;
+    background: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     margin-left: 26%;
+    font-weight: bold;
 }
 
 #contacto button.submit:hover {
     background: #11ABB0;
+    color: #fff;
 }
 
 #contacto span.required {
@@ -425,6 +427,11 @@ body {
 
 #cuentamelo {
 	padding-top: 20px;
+	display: none;
+}
+
+#cuentamelo textarea {
+	margin-bottom: 0px
 }
 
 #send-button {

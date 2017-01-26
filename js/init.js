@@ -24,7 +24,7 @@
 	});
 
 /*----------------------------------------------------*/
-/* Highlight current section in navigation bar
+/* Destacar Link Sección Actual
 ------------------------------------------------------*/
 
 	$(window).on("scroll", function() {
@@ -49,7 +49,7 @@
 	});
 
 /*----------------------------------------------------*/
-/*	Fade In/Out Primary Navigation
+/*	Fade In/Out Fondo Menú Principal
 ------------------------------------------------------*/
 
 	$(window).on('scroll', function() {
@@ -69,5 +69,19 @@
       	}
     });
 
+/*----------------------------------------------------*/
+/*	Mostrar/Ocultar TextArea Form
+------------------------------------------------------*/
+
+	$('input[name="contactHowMeet"]').on('change', function() {
+		if($(this).val() == "otros"){
+    		$('#cuentamelo').show();
+    		$('#cuentamelo textarea').focus();
+    	} else {
+    		$('#cuentamelo').hide();
+    	}
+	});
+
+   
 
 });
