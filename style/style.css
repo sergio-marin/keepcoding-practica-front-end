@@ -270,12 +270,13 @@ body {
 #sobre-mi {
     padding-top: 96px;
     padding-bottom: 50px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .about-me > .mi-video {
 	max-width: 50%;
 	float: left;
-	margin-top: 24px;
 }
 
 .about-me > .about-me-info {
@@ -362,11 +363,19 @@ body {
    	width: 65%;
 }
 
+#contacto .radio-select input {
+	background-color: transparent;
+}
+
 #contacto input:focus,
 #contacto textarea:focus,
 #contacto select:focus {
 	color: #fff;
 	background-color: #11ABB0;
+}
+
+#contacto .radio-select input:focus {
+	background-color: transparent;
 }
 
 #contacto button.submit {
@@ -415,6 +424,8 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+
 
 #cuentamelo {
 	padding-top: 20px;
