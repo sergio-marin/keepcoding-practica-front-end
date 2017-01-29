@@ -445,19 +445,16 @@ textarea { resize: none; }
     background: transparent;
     border: none;
     font-size: large;
-}
-
-#cursos .curso-buttons button:first-child {
     margin-bottom: 20px;
 }
 
-#cursos .curso-buttons button:first-child:hover {
-    color: green;
-}
+#cursos .curso-buttons button:last-child { margin-bottom: 0;}
 
-#cursos .curso-buttons button:last-child:hover {
-    color: red;
-}
+#cursos .curso-buttons button:hover { color: green; }
+
+#cursos .curso-buttons button:last-child:hover { color: red; }
+
+#cursos .curso-buttons button.guardar { display: none; }
 
 #image-loader-cursos {
    	display: none;
