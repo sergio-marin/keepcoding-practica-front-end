@@ -18,7 +18,7 @@ $(document).ready(function() {
 			var contentToAdd = '';
 
 			for (var i = 0; i < cursos.length; i++) {
-				contentToAdd += '<div class="row course-container"><div class="curso-info col-11"><h3>' + cursos[i].academia + '</h3><p class="info">' + cursos[i].titulo + '<span>  &bull;  </span><em class="fecha">' + cursos[i].fecha + '</em></p><p class="desc">' + cursos[i].desc + '</p></div><div class="curso-buttons col-1"><button class="editar" data-curso-id=""><i class="fa fa-pencil "></i></button><button class="eliminar" data-curso-id=""><i class="fa fa-trash-o"></i></button></div></div>';
+				contentToAdd += '<div class="row course-container"><div class="curso-info col-11"><h3 class="tituloCurso">' + cursos[i].academia + '</h3><p class="info">' + cursos[i].titulo + '<span>  &bull;  </span><em class="fecha">' + cursos[i].fecha + '</em></p><p class="desc">' + cursos[i].desc + '</p></div><div class="curso-buttons col-1"><button class="editar" data-curso-id="' + cursos[i].id + '"><i class="fa fa-pencil"></i></button><button class="eliminar" data-curso-id="' + cursos[i].id + '"><i class="fa fa-trash-o"></i></button></div></div>';
 			}
 
 			coursesContainer.append(contentToAdd);
@@ -87,12 +87,39 @@ $(document).ready(function() {
 		});
 	}
 
+	var eliminarCurso = function(id) {
+		$.ajax({
+			type: "DELETE",
+			url: API_URL + "cursos/" + id
+		})
+		.done(function(data){
+			cursos = $.grep(cursos, function(item){
+				return item.id != id;
+			});
+
+			mostrarCursos();
+		})
+		.fail(function(error) {
+			console.error("Error al eliminar el curso.", error);
+		})
+		.always(function(object, status, error){
+			console.log(object, status, error);
+		});
+	}
+
 	$('#enviarNuevoCurso').on("click", function(event){
 		if (tituloInput.val() != '' && academiaInput.val() != '' && fechaInput.val() != '') {
 			event.preventDefault();
 			anadirCurso(tituloInput.val(), academiaInput.val(), fechaInput.val(), descInput.val());
 		}
 	});
+
+	$(document).on("click", ".eliminar", function(event){
+		var id = $(this).data('cursoId');
+		eliminarCurso(id);
+	});
+
+
 
 	setTimeout(function() {
 		obtenerCursos();

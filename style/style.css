@@ -2,12 +2,15 @@
 
 * { box-sizing: border-box; }
 
+
 body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 	background: #ffffff;
 	overflow-x: hidden;
 }
+
+textarea { resize: none; }
 
 .header {
 	display: flex;
@@ -350,10 +353,6 @@ body {
     float: left;
 }
 
-#cursos label {
-	color: #838C95;
-}
-
 #contacto input,
 #contacto textarea,
 #contacto select {
@@ -367,6 +366,12 @@ body {
    	line-height: 24px;
    	width: 65%;
 }
+
+#contacto .radio-select input { background-color: transparent; }
+
+#cursos label { color: #838C95; }
+
+#cursos #coursesForm { margin-left: 25px; }
 
 #cursos input,
 #cursos textarea,
@@ -382,13 +387,7 @@ body {
     display: block;
 }
 
-#cursos span.required {
-	color: #11ABB0;
-}
-
-#contacto .radio-select input {
-	background-color: transparent;
-}
+#cursos span.required { color: #11ABB0; }
 
 #contacto input:focus,
 #cursos input:focus,,
@@ -400,9 +399,7 @@ body {
 	background-color: #11ABB0;
 }
 
-#contacto .radio-select input:focus {
-	background-color: transparent;
-}
+#contacto .radio-select input:focus { background-color: transparent; }
 
 #cursos button.submit,
 #contacto button.submit {
@@ -422,6 +419,7 @@ body {
 #cursos button.submit {
     color: #fff;
     background: #373233;
+    margin-left: 0;
 }
 
 #cursos button.submit:hover {
@@ -431,7 +429,10 @@ body {
 
 #cursos .course-container {
 	display: flex;
+	border-bottom: 1px solid lightgray;
 }
+
+#cursos .course-container:last-child { border-bottom: none; }
 
 #cursos .curso-buttons {
     display: flex;
@@ -458,8 +459,19 @@ body {
     color: red;
 }
 
+#image-loader-cursos {
+   	display: none;
+   	position: absolute;
+    margin-left: 20px;
+}
+
+#image-loader-cursos img {
+	height: 54px;
+   	border-radius: 50%;
+}
+
 #contacto button.submit:hover {
-    background: #fff;
+	background: #fff;
     color: #11ABB0;
 }
 
