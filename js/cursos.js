@@ -7,6 +7,7 @@ $(document).ready(function() {
 	var fechaInput = $('#courseDate');
 	var descInput = $('#courseDescription');
 	var coursesContainer = $('#coursesContainer');
+	var loader = $('#image-loader');
 	
 	var mostrarCursos = function () {
 		coursesContainer.empty();
@@ -17,7 +18,7 @@ $(document).ready(function() {
 			var contentToAdd = '';
 
 			for (var i = 0; i < cursos.length; i++) {
-				contentToAdd += '<div class="row course-container"><div class="cursos-info"><h3>' + cursos[i].academia + '</h3><p class="info">' + cursos[i].titulo + '<span>  &bull;  </span><em class="fecha">' + cursos[i].fecha + '</em></p><p class="desc">' + cursos[i].desc + '</p></div></div>';
+				contentToAdd += '<div class="row course-container"><div class="curso-info col-11"><h3>' + cursos[i].academia + '</h3><p class="info">' + cursos[i].titulo + '<span>  &bull;  </span><em class="fecha">' + cursos[i].fecha + '</em></p><p class="desc">' + cursos[i].desc + '</p></div><div class="curso-buttons col-1"><button class="editar" data-curso-id=""><i class="fa fa-pencil "></i></button><button class="eliminar" data-curso-id=""><i class="fa fa-trash-o"></i></button></div></div>';
 			}
 
 			coursesContainer.append(contentToAdd);
@@ -52,10 +53,48 @@ $(document).ready(function() {
 		});
 	}
 
+	var obtenerCursos = function () {
+		var success = function(data) {
+			cursos = data;
+			mostrarCursos();
+		}
+
+		var error = function(error) {
+			console.error("Error obteniendo los cursos.", error);
+		} 
+
+		var complete = function(object, textStatus) {
+			loader.fadeOut();
+			if (textStatus == 'error') {
+				console.log("Ha habido un error, revisalo.");
+			} else {
+				console.log("Se han obtenido los cursos correctamente.")
+			}
+		}
+
+		var beforeSend = function() {
+			console.log("Enviando...");
+			loader.show();
+		}
+
+		$.ajax({
+			type: "GET",
+			url: API_URL + "cursos",
+			success: success,
+			error: error,
+			complete: complete,
+			beforeSend: beforeSend
+		});
+	}
+
 	$('#enviarNuevoCurso').on("click", function(event){
 		if (tituloInput.val() != '' && academiaInput.val() != '' && fechaInput.val() != '') {
 			event.preventDefault();
 			anadirCurso(tituloInput.val(), academiaInput.val(), fechaInput.val(), descInput.val());
 		}
 	});
+
+	setTimeout(function() {
+		obtenerCursos();
+	}, 1);
 });
