@@ -391,8 +391,11 @@ body {
 }
 
 #contacto input:focus,
+#cursos input:focus,,
 #contacto textarea:focus,
-#contacto select:focus {
+#cursos textarea:focus,
+#contacto select:focus,
+#cursos select:focus {
 	color: #fff;
 	background-color: #11ABB0;
 }
@@ -424,6 +427,35 @@ body {
 #cursos button.submit:hover {
     background: #11ABB0;
     color: #fff;
+}
+
+#cursos .course-container {
+	display: flex;
+}
+
+#cursos .curso-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cursos .curso-buttons button {
+    background: transparent;
+    border: none;
+    font-size: large;
+}
+
+#cursos .curso-buttons button:first-child {
+    margin-bottom: 20px;
+}
+
+#cursos .curso-buttons button:first-child:hover {
+    color: green;
+}
+
+#cursos .curso-buttons button:last-child:hover {
+    color: red;
 }
 
 #contacto button.submit:hover {

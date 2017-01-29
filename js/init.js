@@ -96,6 +96,6 @@
 	      $(this).val(trimmed + " ");
 	      alert("Sólo se permiten 150 palabras ;-)");
 	    }
-  });
+  	});
 
 });
