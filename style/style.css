@@ -390,7 +390,7 @@ textarea { resize: none; }
 #cursos span.required { color: #11ABB0; }
 
 #contacto input:focus,
-#cursos input:focus,,
+#cursos input:focus,
 #contacto textarea:focus,
 #cursos textarea:focus,
 #contacto select:focus,
