@@ -86,7 +86,7 @@
 /*	Restringir Número Palabras Textarea
 ------------------------------------------------------*/
 	$("#contactMessage").on('keyup', function() {
-		var maxWords = 10;
+		var maxWords = 150;
     	var words = this.value.match(/\S+/g).length;
 
 	    if (words > maxWords) {
