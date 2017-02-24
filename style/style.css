@@ -344,7 +344,7 @@ textarea { resize: none; }
 #contacto label,
 #contactHowMeet span {
     font: 15px/24px 'opensans-bold', sans-serif;
-    margin: 12px 0;
+    margin: 5px 0;
     color: #EBEEEE;
     display: inline-block;
     width: 26%;
